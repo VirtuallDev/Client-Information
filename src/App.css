@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+}
+
+.App > .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1vh;
+  background-color: rgb(87, 4, 182);
+  width: 60vh;
+  height: auto fit-content;
+  filter: drop-shadow(10px 10px 15px #1f1f1f);
+}
+
+@keyframes INPUT_FOCUS {
+  from  { border-color: #1f1f1f;}
+  to { border-color: aqua;}
+}
+
+@keyframes INPUT_COLOR_MAIN {
+  from {border-color: rgb(34, 117, 194);}
+  to { border-color: #1f1f1f;}
+}
+
+@keyframes INPUT_HOVER {
+  from  { border-color: #1f1f1f;}
+  to { border-color: rgb(34, 117, 194);}
+}
+
+.container > input {
+  border-radius: 0.5vh;
+  width: 50vh;
+  height: fit-content;
+  padding: 1.5vh;
+  margin-top: 3vh;
+  font-size: 2vh;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: transparent;
+  border: 4px solid #1f1f1f;
+  animation: INPUT_COLOR_MAIN 1s;
+  margin-bottom: 25px;
+  outline: none;
+  color: white;
+}
+
+@keyframes button_hover {
+  0% {border-color:#1f1f1f;}
+  100% {border-color:rgb(0, 119, 255);}
+}
+
+@keyframes button_unfocus {
+  0% {border-color:rgb(0, 119, 255);}
+  100% {border-color:#1f1f1f;}
+}
+
+.container > button {
+  border-radius: 0.5vh;
+  width: 20vh;
+  padding: 1.5vh;
+  font-size: 2vh;
+  height: fit-content;
+  outline: none;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  color: white;
+  background-color: #1f1f1f;
+  border: 2px solid #1f1f1f;
+  animation: button_unfocus 1s;
+}
+
+
+.container > button:hover {
+  animation: button_hover 1s;
+  border-color:rgb(0, 119, 255);
+  cursor: pointer;
+}
+
+.container > input:focus{
+  animation: INPUT_FOCUS 1s;
+  border-color: aqua;
+}
+
+.container > input:hover {
+  animation: INPUT_HOVER 1s;
+  border-color: rgb(34, 117, 194);
+}
+
+
+
+
+
+
+
+
+
+
+
+.all-inputs {
+  position: absolute;
+  top: 50%;
+  left: 82%;
+  width: 60vh;
+  height: fit-content;
+  border-radius: 1vh;
+  background-color: rgba(50,50,50,0.8);
+  transform: translate(-50%, -50%);
+  padding: 1%;
+  float: left;
+  color: white;
+  filter: drop-shadow(10px 10px 5px #1f1f1f);
+}
+
+.all-inputs > h1 > img {
+  border-radius: 50vh;
+  float: left;
+  margin-left: 2%;
+  width: 40px;
+  height: 40px;
+}
+
+.all-inputs > h1 {
+  margin: 10px;
+  margin-bottom: 5vh;
+}
+
+.all-inputs > .information {
+  text-align: left;
+  padding-left: 1.85vh;
+  word-wrap: break-word;
+}
+
+.all-inputs > .information > .piece {
+  padding-bottom: 0.8vh;
+}
+
+/* utils */
+.bolded {
+  font-weight: bolder;
+}
